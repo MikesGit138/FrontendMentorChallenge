@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan:hsl(178, 100%, 50%);
+$mainBG: hsl(217, 54%, 11%);
+$cardBG: hsl(216, 50%, 16%);
+$line-color: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+$font-weight: (
+    "small" : 300,
+    "medium" : 400,
+    "large" : 600
+);
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Outfit';
+    background-color: $mainBG;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+ .main-card{
+    background-color: $cardBG;
+    // margin: 0 50%;
+     height: 500px;
+    // width: 600px;
+    margin: 20px 480px; 
+    border-radius: 8px;
+    padding: 20px;
+}
+img{
+    width: 100%;
+    // margin: 20px;
+    border-radius: 8px;
+    height: 20vw;
+    object-fit: cover;
+}
+.head{
+    color: $white;
+    font-weight: map-get($font-weight,large);
+}
+#des-section{
+    padding-bottom: 1rem;
+}
+.description{
+    color: $soft-blue;
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+}
+.eth-number{
+    color: $cyan;
+    font-weight: map-get($font-weight,large)
+}
+.flex{
+    display: inline-flex;
+    column-gap: 6.7rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $line-color;
+}
+hr{
+    color: $line-color;
+}
+#bottom{
+    margin-top: 10px;
+}
