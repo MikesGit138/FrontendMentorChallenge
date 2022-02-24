@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
 
+//Colours:
 
 $soft-blue: hsl(215, 51%, 70%);
 $cyan:hsl(178, 100%, 50%);
@@ -7,11 +8,18 @@ $mainBG: hsl(217, 54%, 11%);
 $cardBG: hsl(216, 50%, 16%);
 $line-color: hsl(215, 32%, 27%);
 $white: hsl(0, 0%, 100%);
+
+//Font sizes:
 $font-weight: (
     "small" : 300,
     "medium" : 400,
     "large" : 600
 );
+
+//Device widths
+$desktop-width: 1440px;
+$mobile-width: 375px;
+
 body{
     box-sizing: border-box;
     margin: 0;
@@ -23,25 +31,34 @@ body{
  .main-card{
     background-color: $cardBG;
     // margin: 0 50%;
-     height: 500px;
-    // width: 600px;
-    margin: 20px 480px; 
-    border-radius: 8px;
+     height: 85vh;
+    width: 18.5rem;
+    //margin: 2em 30em; 
+   margin: 3rem 25rem;
+    border-radius: 12px;
     padding: 20px;
+    display: inline-grid;
+    justify-content: center;
+    font-size: 18px;
+    
 }
 img{
     width: 100%;
     // margin: 20px;
     border-radius: 8px;
-    height: 20vw;
+    height: 40vh;
     object-fit: cover;
 }
 .head{
     color: $white;
     font-weight: map-get($font-weight,large);
+    padding-bottom: .1rem;
+    margin: 0;
 }
 #des-section{
-    padding-bottom: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
 }
 .description{
     color: $soft-blue;
@@ -50,19 +67,27 @@ img{
         color: $white;
     }
 }
-.eth-number{
-    color: $cyan;
-    font-weight: map-get($font-weight,large)
-}
 .flex{
-    display: inline-flex;
-    column-gap: 6.7rem;
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    // column-gap: 6.7rem;
+    // padding-bottom: 20px;
+    padding-bottom: 1.3rem;
     border-bottom: 1px solid $line-color;
+    .eth-number{
+        color: $cyan;
+        font-weight: map-get($font-weight,large)
+    }
 }
 hr{
     color: $line-color;
 }
 #bottom{
-    margin-top: 10px;
+    // margin-top: 10px;
+    margin-top: .5rem;
+}
+@media only screen and(max-width:700px){
+    .main-card{
+        margin: 1em 2.9em;
+    }
 }
